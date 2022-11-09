@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <img class="logo" src="images/logo.svg" alt="" />
+
+    <section class="calculator">
+      <div class="desktop-wrap">
+        <article class="bill">
+          <p class="bill__text option">Bill</p>
+          <input type="text" class="bill__input input" placeholder="0" />
+        </article>
+
+        <article class="tip">
+          <p class="tip__text option">Select Tip %</p>
+
+          <div class="values">
+            <button class="value">5%</button>
+            <button class="value">10%</button>
+            <button class="value">15%</button>
+            <button class="value">25%</button>
+            <button class="value">50%</button>
+            <input
+              type="text"
+              class="custom__input"
+              placeholder="Custom"
+              maxlength="3"
+              onclick="resetActiveStates()"
+            />
+          </div>
+        </article>
+
+        <article class="people">
+          <div class="people-wrapper">
+            <p class="people__text option">Number of People</p>
+            <p class="people__error-msg hidden">Wrong format</p>
+          </div>
+          <input type="text" class="people__input input" placeholder="0" />
+        </article>
+      </div>
+
+      <article class="results">
+        <div class="results-wrapper">
+          <div>
+            <p class="tip-result result">Tip Amount</p>
+            <p>/ person</p>
+          </div>
+          <p class="tip-value result-value"></p>
+        </div>
+        <div class="results-wrapper">
+          <div>
+            <p class="total-result result">Total</p>
+            <p>/ person</p>
+          </div>
+          <p class="total-value result-value"></p>
+        </div>
+
+        <button class="reset-btn btn">Reset</button>
+      </article>
+    </section>
+    <!--
+
+  5%
+  10%
+  15%
+  25%
+  50%
+  Custom
+
+  Number of People
+
+  Tip Amount
+  / person
+
+  Total
+  / person
+
+  Reset
+   -->
+  </body>
+</html>
